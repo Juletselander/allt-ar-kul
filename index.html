@@ -7,13 +7,25 @@
   </head>
   <body>
     <h1> Vad är kuligast? </h1>
-    <img src="http://canineandcohomeboarding.co.uk/wp-content/uploads/2015/02/im-having-so-much-fun-green.png"
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Something"></input>
       </div>
-      <button class="add.option"> Add </button>
+      <button class="addOption">Add</button>
     </div>
+    <div class="resultSection"></div>
     <button>Go!</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function() {
+      $('.resultSection').hide()
+
+      var add_option = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+        $('.addOption').click(add_option)
+    })
+    </script>
   </body>
 </html>
